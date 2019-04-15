@@ -1,0 +1,648 @@
+/* SITE: WILLIAM GIBSON */
+
+/* BASE */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif; /* Your main typeface */
+  color: black;            /* Your main text color */
+  background-color: white; /* Your main background color */
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+main {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+}
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 3.25em;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+section {
+  z-index: 4;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: white;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  z-index: 2;
+  margin: 0;
+  padding: 2em 1em;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  text-align: center;
+  transform: translateY(-100vh);
+  background-color: rgba(189, 204, 212,1);
+  opacity: 0;
+  transition: transform 0.3s;
+}
+.nav-active nav {
+  opacity: 1;
+  transform: translateY(0);
+}
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  color: white;
+  font-size: 1em;
+}
+.menu-toggle:hover {
+  position: fixed;
+  background-color: white;
+  background-position: center;
+  color: black;
+}
+nav a {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em;
+  width: 50%;
+  font-size: 3em;
+}
+nav a:hover {
+  background-color: white;
+}
+nav .closebtn {
+  position: absolute;
+  top: 0em;
+  right: 0.5em;
+  font-size: 7em;
+  padding: 0;
+  width: auto;
+  height: auto;
+  color: black;
+}
+nav .closebtn:hover {
+  color: white;
+  background-color: transparent;
+}
+.closebtn {
+  transition: transform 0.3s;
+}
+hr {
+  width: 50vw;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+}
+/* Dropdown Button */
+.dropbtn {
+  color: black;
+  border: none;
+  text-align: center;
+}
+.submenu {
+  font-size: 2em;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 50vw;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: relative;
+  min-width: 25vw;
+  z-index: 5;
+  margin: 0 auto;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+  width: 25vw;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: grey;
+  color: white;
+  width: 25vw;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  text-align: center;
+  width: 25vw;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: white;
+  width: 50vw;
+}
+
+
+.fa {
+  position: fixed;
+  z-index: 3;
+  top: 40em;
+  left: auto;
+  right: 0;
+  padding: 1em;
+  font-size: 1em;
+  width: 8em;
+  text-align: left;
+  text-decoration: none;
+  font-weight: bold;
+}
+.fa:hover {
+  background-color: black
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+/* TYPOGRAPHY */
+a {
+  text-decoration: none;
+  color: black;             /* Your main link color */
+}
+.home-link {
+  color: white;
+}
+p {
+  padding: 0.5em 1em;
+  line-height: 1.5em;
+  max-width: 100vw;
+}
+blockquote {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+h1 {
+  margin: 0;
+  padding:  0.3em 0;
+  position: relative;
+  text-transform: uppercase;
+  color: white;
+  font-size: 2.5em;
+}
+
+h2 {
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+h3 {
+  position: relative;
+  padding: 0.5em;
+  margin: 0;
+  font-size: 3em;
+}
+
+h4 {
+
+}
+/*
+h5 {
+
+}
+h6 {
+
+}
+*/
+
+/* GRID */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.column {
+  width: 100%;
+  padding: 1em;
+  float: left;
+}
+.col-quarter,
+.col-three-quarters {
+  width: 100%;
+  
+}
+@media (min-width: 60em) {
+  .col-quarter {
+    width: 20%;
+
+  }
+  .col-three-quarters {
+    width: 80%;
+  }
+}
+.row {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: white;
+  color: black;
+  padding: 1em;
+}
+.row2 {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: grey;
+  color: white;
+  padding: 1em;
+}
+
+
+/* SLIDER */
+.slider {
+  max-height: 80vh;
+  width: 100vw;
+}
+.sliderImg {
+  height: auto;
+  width: 100vw;
+  position: relative;
+  transition: all 0.3s ease;
+  position: absolute;
+  transform: translateX(100vw)
+}
+.sliderImg:first-child {
+  position: relative;
+  transform: translateX(-100vw)
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 4%;
+  width: auto;
+  padding: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Author Bio */
+.bio {
+  height: auto;
+  width: 100%;
+  background-color:#ffffff;
+  color: black;
+}
+.gibson-photo {
+  position: relative;
+  margin: 0 auto;
+  background-image: url(images/gibson-photo.png);
+  background-position: center;
+  background-size: 20em;
+  background-repeat: no-repeat;
+  height: 20em;
+  width: 20em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.bio-text {
+  margin: 0;
+}
+.biobutton {
+  position: absolute;
+  right: 13em;
+  text-align: right;
+  border-style: none;
+  background-color:  rgba(189, 204, 212,1);
+  color: black;
+  padding: 1.5em;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+}
+.biobutton:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Book Feature */
+.books {
+  height: auto;
+  width: 100%;
+  background-color:grey;
+}
+.nyt-heading {
+  color: white;
+  text-align: center;
+}
+.bestsellers {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  height: 25em;
+  padding: 0.5em;
+  margin: 0 auto;
+}
+
+/* ABOUT PAGE */
+.about-bg {
+  background-color: rgba(189, 204, 212,1);
+  height: 20em;
+}
+.about-text {
+  max-width: 50vw;
+}
+
+/* BOOK PAGE */
+
+.bookbutton {
+  display: block; 
+  position: relative;
+  left: 1em;
+  text-align: right;
+  border-style: none;
+  background-color:  rgba(189, 204, 212,1);
+  color: black;
+  padding: 1.5em;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  text-align: center;
+  width: 8em;
+}
+.bookbutton:hover {
+  background-color: black;
+  color: white;
+}
+.peripheral {
+  background-image: url(images/theperipheral-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30em;
+  width: 20em;
+}
+.distrust {
+  background-image: url(images/distrustthatparticularflavor-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30em;
+  width: 20em;
+}
+.zero {
+  background-image: url(images/zerohistory-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30em;
+  width: 20em;
+}
+.spook {
+  background-image: url(images/spookcountry-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30em;
+  width: 20em;
+}
+.pattern {
+  background-image: url(images/patternrecognition-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30em;
+  width: 20em;
+}
+.tomorrowparty {
+  background-image: url(images/All_Tomorrows_Gibson.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30em;
+  width: 20em;
+}
+.idoru {
+  background-image: url(images/idoru-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30em;
+  width: 20em;
+}
+.countzero {
+  background-image: url(images/countzero-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30em;
+  width: 20em;
+}
+.neuromancer {
+  background-image: url(images/neuromancer-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30em;
+  width: 20em;
+}
+.synopsis {
+  width: 100%;
+  margin: 0;
+  padding-top: 0;
+}
+.peripheral, .distrust, .zero, .spook, .pattern, .tomorrowparty, .idoru, .countzero, .neuromancer {
+  margin: 1em;
+}
+
+/* RESOURCES PAGE */
+.resource-titles {
+  text-align: center;
+  padding: 0.5em;
+}
+.resource-containers {
+  width: 50vw;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.web-links:hover {
+  color: white;
+  background-color: black;
+  padding: 0.5em;
+}
+
+.interview-title {
+  text-align: center;
+  padding: 0.5em;
+}
+.interview-heading {
+  text-align: center;
+  margin-top: 0;
+  background-color: black;
+  color: white;
+  padding: 0.5em; 
+
+}
+.interview-text {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+@media (min-width: 60em) {
+  .bookbutton {
+    bottom: 2em;
+    left: 1em;
+  }
+  .column {
+    width: 50%;
+  }
+  h1 {
+    font-size: 5em;
+    padding: 0.3em 0 0 0;
+  }
+  header {
+    height: 6.5em;
+  }
+  .menu-toggle {
+    margin: auto 0;
+    font-size: 2em;
+  }
+  h2 {
+    text-align: right;
+    font-size: 3em;
+  }
+  h3 {
+    line-height: 1;
+  }
+  p {
+    max-width: 100vw;
+  }
+  .slider {
+    height: auto;
+  }
+  .sliderImg {
+    height: auto;
+    width: 100vw;
+    /* position: relative; */
+    top: -6em;
+  }
+  .prev, .next {
+    top: 12%;
+  }
+  .bio-text {
+    text-align: right;
+    padding-right: 8em;
+  }
+  .bio-heading {
+    padding: 0.5em;
+    padding-right: 2.5em;
+  }
+  .gibson-photo {
+    margin: 2em auto;
+  }
+  nav .closebtn {
+    top: 0em;
+    right: 1em;
+    font-size: 7em;
+  }
+  .gibson-photo {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .about-title {
+    text-align: center;
+  }
+  .about-text {
+    display: block;
+    margin: 0 auto;
+  }
+  .bestsellers {
+    margin: 0;
+    display: inline;
+  }
+
+  blockquote {
+    max-width: 50vw;
+    margin: 0 auto;
+    padding: 0 1.5em;
+  }
+  .row .row2 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+  .synopsis {
+    position: relative;
+    display: block;
+    max-width: 80%;
+    height: 20em;
+    padding: 0 1em 1em 1em;
+    
+  }
+  .peripheral, .distrust, .zero, .spook, .pattern, .tomorrowparty, .idoru, .countzero, .neuromancer {
+    display: block;
+    position: relative;
+    float: right;
+    height: 25em;
+    width: 15em;
+    margin: 1em;
+  }
+
+
+}
+/* Include any other media queries you may need here! */
+
+
+

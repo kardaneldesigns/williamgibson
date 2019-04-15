@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <title>William Gibson</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,800" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <a href="https://twitter.com/GreatDismal" class="fa fa-twitter"> follow</a>
+  <header>
+      <h1><a class='home-link' href="index.html">William Gibson</a></h1>
+      <div class="menu-toggle">Menu</div>
+  </header>
+  
+  <nav id="menu">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <a href="index.html" class="page-link">Home</a>
+      <hr>
+      <a href="about.html">About</a>
+      <hr>
+      <a href="books.html">Books</a>
+      <hr>
+      <div class="dropdown">
+          <a href="resources.html" class="dropbtn">Resources</a>
+          <div class="dropdown-content">
+              <a href="interviews.html" class="submenu">Interview With Amazon.com</a>
+          </div>
+      </div>
+  </nav>
+  <main>
+    <section>
+      <div class="slider">
+        <img class="sliderImg" src='images/slider1-web.jpg'>
+        <img class="sliderImg" src='images/slider2-web.jpg'>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
+    
+    <div class="grid">
+    <section>
+      <div class="column">
+        <div class="gibson-photo"></div>
+      </div>
+      <div class="column">
+        <h2 class="bio-heading">About the Author</h2>
+        <p class="bio-text">William Gibson’s first novel, Neuromancer, won the Hugo Award, the Philip K. Dick Memorial Award, and the Nebula Award in 1984.
+        <br>
+        He is also the New York Times bestselling author of Count Zero, Mona Lisa Overdrive, Burning Chrome, Virtual Light, Idoru, All Tomorrow’s Parties, Pattern Recognition, Spook Country, Zero History, Distrust That Particular Flavor, and The Peripheral. 
+        <br>
+        He lives in Vancouver, British Columbia, with his wife.</p>
+        <button><a class="biobutton" href="about.html">Read More</a></button>
+        <div class="bio"></div>
+      </div>
+    </section>
+    </div>  
+
+    <section>
+      <div class="books">
+        <h2 class="nyt-heading">New York Times Bestsellers</h2>
+        <a href="books.html#book1"><img class="bestsellers" src="images/theperipheral-cover.jpg"></a>
+        <a href="books.html#book2"><img class="bestsellers" src="images/distrustthatparticularflavor-cover.jpg"></a>
+        <a href="books.html#book3"><img class="bestsellers" src="images/zerohistory-cover.jpg"></a>
+        <a href="books.html#book4"><img class="bestsellers" src="images/spookcountry-cover.jpg"></a>
+        <a href="books.html#book5"><img class="bestsellers" src="images/patternrecognition-cover.jpg"></a>
+        <a href="books.html#book6"><img class="bestsellers" src="images/All_Tomorrows_Gibson.jpg"></a>
+        <a href="books.html#book7"><img class="bestsellers" src="images/idoru-cover.jpg"></a>
+        <a href="books.html#book8"><img class="bestsellers" src="images/countzero-cover.jpg"></a>
+        <a href="books.html#book9"><img class="bestsellers" src="images/neuromancer-cover.jpg"></a>
+      </div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
